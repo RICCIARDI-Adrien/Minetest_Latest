@@ -5,10 +5,12 @@ help:
 	@printf "Usage : TODO\n"
 
 build:
-	rm -rf $(BASE_PATH)/Build
-	mkdir $(BASE_PATH)/Build
 	cd $(BASE_PATH)/Build && cmake $(BASE_PATH)/minetest -DRUN_IN_PLACE=TRUE
 	cd $(BASE_PATH)/Build && make -j $(PROCESSORS_COUNT)
+
+clean:
+	rm -rf $(BASE_PATH)/Build
+	mkdir $(BASE_PATH)/Build
 
 install:
 	@printf "\033[33mGetting Minetest engine sources...\033[0m\n"
