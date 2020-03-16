@@ -25,3 +25,19 @@ install:
 	git clone https://notabug.org/TenPlus1/mobs_monster $(BASE_PATH)/minetest/mods/mobs_monster
 	@printf "\033[33mGetting NPC mod sources...\033[0m\n"
 	git clone https://notabug.org/TenPlus1/mobs_npc $(BASE_PATH)/minetest/mods/mobs_npc
+
+update:
+	@printf "\033[33mUpdating Minetest engine sources...\033[0m\n"
+	cd minetest && git pull
+	@printf "\033[33mUpdating Minetest game sources...\033[0m\n"
+	cd $(BASE_PATH)/minetest/games/minetest_game && git pull
+	@printf "\033[33mUpdating mobs mod base sources...\033[0m\n"
+	cd $(BASE_PATH)/minetest/mods/mobs_redo && git pull
+	@printf "\033[33mUpdating animals mod sources...\033[0m\n"
+	cd $(BASE_PATH)/minetest/mods/mobs_animal && git pull
+	@printf "\033[33mUpdating horses mod sources...\033[0m\n"
+	cd $(BASE_PATH)/minetest/mods/mob_horse && git pull
+	@printf "\033[33mUpdating monsters mod sources...\033[0m\n"
+	cd $(BASE_PATH)/minetest/mods/mobs_monster && git pull
+	@printf "\033[33mUpdating NPC mod sources...\033[0m\n"
+	cd $(BASE_PATH)/minetest/mods/mobs_npc && git pull
