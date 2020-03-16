@@ -2,7 +2,14 @@ BASE_PATH = $(shell pwd)
 PROCESSORS_COUNT = $(shell cat /proc/cpuinfo | grep processor | wc -l)
 
 help:
-	@printf "Usage : TODO\n"
+	@printf "Available rules :\n"
+	@printf "   download : retrieve all needed source files\n"
+	@printf "   build : build everything to run in place, start minetest/bin/minetest to run the game\n"
+	@printf "   update: update all sources to latest version\n"
+	@printf "   clean : remove everything\n"
+	@printf "\n"
+	@printf "First usage should be : make clean && make download && make build\n"
+	@printf "Following usages should be : make update && make build\n"
 
 build:
 	cd $(BASE_PATH)/Build && cmake $(BASE_PATH)/minetest -DRUN_IN_PLACE=TRUE
