@@ -12,7 +12,7 @@ clean:
 	rm -rf $(BASE_PATH)/Build
 	mkdir $(BASE_PATH)/Build
 
-install:
+download:
 	@printf "\033[33mGetting Minetest engine sources...\033[0m\n"
 	git clone https://github.com/minetest/minetest
 	@printf "\033[33mGetting Minetest game sources...\033[0m\n"
