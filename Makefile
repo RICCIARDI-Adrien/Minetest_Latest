@@ -12,6 +12,7 @@ help:
 	@printf "Following usages should be : make update && make build\n"
 
 build:
+	mkdir -p $(BASE_PATH)/Build
 	cd $(BASE_PATH)/Build && cmake $(BASE_PATH)/minetest -DRUN_IN_PLACE=TRUE
 	cd $(BASE_PATH)/Build && make -j $(PROCESSORS_COUNT)
 
