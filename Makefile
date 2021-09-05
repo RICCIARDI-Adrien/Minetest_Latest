@@ -23,6 +23,7 @@ clean:
 download:
 	@printf "\033[33mGetting Minetest engine sources...\033[0m\n"
 	git clone https://github.com/minetest/minetest
+	git clone https://github.com/minetest/irrlicht minetest/lib/irrlichtmt
 	@printf "\033[33mGetting Minetest game sources...\033[0m\n"
 	git clone https://github.com/minetest/minetest_game $(BASE_PATH)/minetest/games/minetest_game
 	@printf "\033[33mGetting mobs mod base sources...\033[0m\n"
