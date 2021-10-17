@@ -40,6 +40,7 @@ download:
 update:
 	@printf "\033[33mUpdating Minetest engine sources...\033[0m\n"
 	cd minetest && git pull
+	cd minetest/lib/irrlichtmt && git pull
 	@printf "\033[33mUpdating Minetest game sources...\033[0m\n"
 	cd $(BASE_PATH)/minetest/games/minetest_game && git pull
 	@printf "\033[33mUpdating mobs mod base sources...\033[0m\n"
