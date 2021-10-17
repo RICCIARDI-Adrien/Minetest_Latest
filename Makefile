@@ -10,6 +10,8 @@ help:
 	@printf "\n"
 	@printf "First usage should be : make clean && make download && make build\n"
 	@printf "Following usages should be : make update && make build\n"
+	@printf "\n"
+	@printf "\033[32mWhen build has succeeded, execute this command to play the game :\033[0m $(BASE_PATH)/minetest/bin/minetest\n"
 
 build:
 	mkdir -p $(BASE_PATH)/Build
