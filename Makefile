@@ -18,7 +18,13 @@ build:
 
 clean:
 	rm -rf $(BASE_PATH)/Build
-	mkdir $(BASE_PATH)/Build
+	@$(eval WORLDS_BACKUP_NAME = $(BASE_PATH)/worlds-$(shell date "+%4Y-%m-%d_%H-%M-%S").bak)
+	@if [ -e $(BASE_PATH)/minetest/worlds ]; \
+	then \
+		printf "\033[33mSaving existing worlds to $(WORLDS_BACKUP_NAME)...\033[0m\n"; \
+		mv $(BASE_PATH)/minetest/worlds $(WORLDS_BACKUP_NAME); \
+	fi
+	rm -rf $(BASE_PATH)/minetest
 
 download:
 	@printf "\033[33mGetting Minetest engine sources...\033[0m\n"
