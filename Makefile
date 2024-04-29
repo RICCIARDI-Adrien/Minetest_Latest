@@ -44,6 +44,8 @@ download:
 	git clone https://github.com/minetest-mirrors/mobs_monster $(BASE_PATH)/minetest/mods/mobs_monster
 	@printf "\033[33mGetting NPC mod sources...\033[0m\n"
 	git clone https://github.com/minetest-mirrors/mobs_npc $(BASE_PATH)/minetest/mods/mobs_npc
+	@printf "\033[33mGetting water mod sources...\033[0m\n"
+	git clone https://github.com/minetest-mirrors/mobs_water $(BASE_PATH)/minetest/mods/mobs_water
 
 update:
 	@printf "\033[33mUpdating Minetest engine sources...\033[0m\n"
@@ -61,3 +63,5 @@ update:
 	cd $(BASE_PATH)/minetest/mods/mobs_monster && git pull
 	@printf "\033[33mUpdating NPC mod sources...\033[0m\n"
 	cd $(BASE_PATH)/minetest/mods/mobs_npc && git pull
+	@printf "\033[33mUpdating water mod sources...\033[0m\n"
+	cd $(BASE_PATH)/minetest/mods/mobs_water && git pull
